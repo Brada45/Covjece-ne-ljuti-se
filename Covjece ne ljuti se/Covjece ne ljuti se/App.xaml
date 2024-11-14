@@ -1,0 +1,19 @@
+﻿<Application x:Class="Covjece_ne_ljuti_se.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Covjece_ne_ljuti_se"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/BigButton.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles/SmallRoundedButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles/GridBig.xaml"/>
+
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+         
+    </Application.Resources>
+</Application>

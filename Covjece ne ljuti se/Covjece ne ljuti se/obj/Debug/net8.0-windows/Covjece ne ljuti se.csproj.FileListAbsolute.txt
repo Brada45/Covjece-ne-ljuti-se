@@ -1,0 +1,73 @@
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.exe
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.deps.json
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.runtimeconfig.json
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.pdb
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Styles\BigButton.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Styles\RoundedButtonStyle.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Styles\SmallRoundedButtonStyle.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se_MarkupCompile.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se_MarkupCompile.lref
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\App.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.g.resources
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.AssemblyInfoInputs.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.AssemblyInfo.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.csproj.CoreCompileInputs.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.sourcelink.json
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\refint\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.pdb
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.genruntimeconfig.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\ref\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\crveniPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_1.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_2.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_3.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_4.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_5.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_6.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\plaviPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\zeleniPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\zutiPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\covjece\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se_Content.g.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\crveniPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_1.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_2.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_3.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_4.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_5.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\kocka_6.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\plaviPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\zeleniPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\zutiPijun.png
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.exe
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.deps.json
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.runtimeconfig.json
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Covjece ne ljuti se.pdb
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Styles\BigButton.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Styles\RoundedButtonStyle.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Styles\SmallRoundedButtonStyle.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se_Content.g.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se_MarkupCompile.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se_MarkupCompile.lref
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\App.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.g.resources
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.AssemblyInfoInputs.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.AssemblyInfo.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.csproj.CoreCompileInputs.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.sourcelink.json
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\refint\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.pdb
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.genruntimeconfig.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\ref\Covjece ne ljuti se.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\CovjeceNeLjutiSe\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Styles\GridBig.baml

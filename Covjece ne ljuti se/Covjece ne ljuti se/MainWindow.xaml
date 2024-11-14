@@ -1,0 +1,278 @@
+﻿<Window x:Class="Covjece_ne_ljuti_se.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Covjece_ne_ljuti_se"
+        mc:Ignorable="d"
+        ClipToBounds="False"
+        Title="MainWindow" Height="850" Width="800">
+    <Grid ClipToBounds="False" Height="800" Width="800">
+        <Grid Style="{StaticResource BigGrid}" Margin="24,25,576,575" Background="Red">
+            <Grid>
+                <Button Name="ButtonKucicaCrvena1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100"  Click="clicked_redHouseOne">
+                    <Image Name="KucicaCrvena1" Height="40" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                </Button>
+                <Button Name="ButtonKucicaCrvena2"  Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_redHouseTwo" >
+                    <Image Name="KucicaCrvena2" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaCrvena3"  Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_redHouseThree"  >
+                    <Image Name="KucicaCrvena3" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaCrvena4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_redHouseFour" >
+                    <Image Name="KucicaCrvena4" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+
+            </Grid>
+
+        </Grid>
+        <Grid Style="{StaticResource BigGrid}" Margin="567,25,10,575" Background="Green">
+            <Grid>
+                <Button Name="ButtonKucicaZelena1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100" Click="clicked_greenHouseOne" >
+                    <Image Name="KucicaZelena1" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaZelena2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_greenHouseTwo" >
+                    <Image Name="KucicaZelena2"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaZelena3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_greenHouseThree"  >
+                    <Image Name="KucicaZelena3"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaZelena4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_greenHouseFour" >
+                    <Image Name="KucicaZelena4"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+            </Grid>
+
+        </Grid>
+        <Grid Style="{StaticResource BigGrid}" Margin="24,566,576,34" Background="Blue" >
+            <Grid>
+                <Button Name="ButtonKucicaPlava1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100" Click="clicked_blueHouseOne" >
+                    <Image Name="KucicaPlava1"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaPlava2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_blueHouseTwo" >
+                    <Image Name="KucicaPlava2"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaPlava3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_blueHouseThree"  >
+                    <Image Name="KucicaPlava3"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaPlava4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_blueHouseFour" >
+                    <Image Name="KucicaPlava4"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+
+            </Grid>
+
+        </Grid>
+        <Grid Style="{StaticResource BigGrid}" Margin="576,542,24,10" Background="Yellow" >
+            <Grid>
+                <Button Name="ButtonKucicaZuta1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100" Click="clicked_yellowHouseOne" >
+                    <Image Name="KucicaZuta1"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaZuta2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_yellowHouseTwo" >
+                    <Image Name="KucicaZuta2" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaZuta3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_yellowHouseThree"  >
+                    <Image Name="KucicaZuta3" Height="40" Width="60"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+                <Button Name="ButtonKucicaZuta4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_yellowHouseFour" >
+                    <Image Name="KucicaZuta4" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+            </Grid>
+
+        </Grid>
+
+        <Button Name="ButtonPolje1" Style="{StaticResource FieldButton}" Margin="24,266,726,484" Background="Red" Click="clicked_FieldOne" >
+            <Image  Name="Polje1" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Grid>
+            <Button Name="ButtonKrajCrveni1" Style="{StaticResource FieldButton}" Margin="80,375,670,375" Background="Red" Click="clicked_redFisnishOne" >
+                <Image Name="KrajCrveni1"  Height="50" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajCrveni2" Style="{StaticResource FieldButton}" Margin="135,375,615,375" Background="Red" Click="clicked_redFinishTwo" >
+                <Image  Name="KrajCrveni2" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajCreni3" Style="{StaticResource FieldButton}" Margin="190,375,560,375" Background="Red" Click="clicked_redFinishThree" >
+                <Image  Name="KrajCrveni3" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajCrveni4" Style="{StaticResource FieldButton}" Margin="245,375,505,375" Background="Red" >
+                <Image Name="KrajCrveni4"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </Grid>
+
+        <Button Name="ButtonPolje40" Style="{StaticResource FieldButton}" Margin="24,375,726,375" Click="clicked_FieldFourty" >
+            <Image Name="Polje40"   Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje39" Style="{StaticResource FieldButton}" Margin="24,478,726,272" Click="clicked_FieldThirtynine" >
+            <Image Name="Polje39"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje38" Style="{StaticResource FieldButton}" Margin="24,478,615,272" Click="clicked_FieldThirtyeight" >
+            <Image Name="Polje38"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje37" Style="{StaticResource FieldButton}" Margin="135,478,615,272" Click="clicked_FIeldThirtyseven" >
+            <Image Name="Polje37"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje36" Style="{StaticResource FieldButton}" Margin="190,478,560,272" Click="clicked_FieldThritysix" >
+            <Image Name="Polje36"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje35" Style="{StaticResource FieldButton}" Margin="245,478,505,272" Click="clicked_FieldThirtyfive" >
+            <Image Name="Polje35" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Grid>
+            <Button Name="ButtonKrajPlavi1" Style="{StaticResource FieldButton}" Margin="375,646,375,104" Background="Blue" Click="clicked_blueFinishOne">
+                <Image Name="KrajPlavi1"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajPlavi2" Style="{StaticResource FieldButton}" Margin="375,591,375,159" Background="Blue" Click="clicked_blueFinishTwo" >
+                <Image Name="KrajPlavi2" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajPlavi3" Style="{StaticResource FieldButton}" Margin="375,536,375,214" Background="Blue" Click="clicked_blueFinishThree" >
+                <Image Name="KrajPlavi3" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajPlavi4" Style="{StaticResource FieldButton}" Margin="375,481,375,269" Background="Blue" >
+                <Image Name="KrajPlavi4"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+
+        </Grid>
+        <Button Name="ButtonPolje34" Style="{StaticResource FieldButton}" Margin="245,536,505,214" Click="clicked_FieldThirtyfour" >
+            <Image Name="Polje34"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje33" Style="{StaticResource FieldButton}" Margin="245,591,505,159" Click="clicked_FieldThirtythree" >
+            <Image Name="Polje33" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje32" Style="{StaticResource FieldButton}" Margin="245,646,505,104" Click="clicked_FieldThirtytwo" >
+            <Image Name="Polje32"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje31"  Style="{StaticResource FieldButton}" Margin="245,700,505,48" Background="Blue" Click="clicked_FieldThiryone" >
+            <Image Name="Polje31" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje30" Style="{StaticResource FieldButton}" Margin="375,700,375,48" Click="clicked_FieldThirty" >
+            <Image Name="Polje30" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje29" Style="{StaticResource FieldButton}" Margin="505,700,245,48" Click="clicked_FieldTwentynine" >
+            <Image Name="Polje29" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje28" Style="{StaticResource FieldButton}" Margin="505,646,245,104" Click="clicked_FieldTwentyeight">
+            <Image Name="Polje28"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje27" Style="{StaticResource FieldButton}" Margin="505,591,245,159" Click="clicked_FieldTwentyseven" >
+            <Image Name="Polje27" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje26" Style="{StaticResource FieldButton}" Margin="505,536,245,214" Click="clicked_FieldTwentysix" >
+            <Image Name="Polje26" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje25" Style="{StaticResource FieldButton}" Margin="505,478,245,272" Click="clicked_FieldTwentyfive" >
+            <Image Name="Polje25" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje24" Style="{StaticResource FieldButton}" Margin="560,478,190,272" Click="clicked_FieldTwentyfour" >
+            <Image Name="Polje24" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje23" Style="{StaticResource FieldButton}" Margin="615,478,135,272" Click="clicked_FieldTwentythree" >
+            <Image Name="Polje23" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje22" Style="{StaticResource FieldButton}" Margin="615,478,24,272" Click="clicked_FieldTwentytwo" >
+            <Image Name="Polje22" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Grid>
+            <Button Name="ButtonPolje21"  Style="{StaticResource FieldButton}" Margin="726,478,24,272" Background="Yellow" Click="clicked_FieldTwentyone" >
+                <Image Name="Polje21" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZuti4"  Style="{StaticResource FieldButton}" Margin="505,375,245,375" Background="Yellow" >
+                <Image Name="KrajZuti4" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZuti3" Style="{StaticResource FieldButton}" Margin="560,375,190,375" Background="Yellow" Click="clicked_yellowFinishThree" >
+                <Image Name="KrajZuti3"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZuti2" Style="{StaticResource FieldButton}" Margin="615,375,135,375" Background="Yellow" Click="clicked_yellowFinishTwo" >
+                <Image Name="KrajZuti2" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZuti1" Style="{StaticResource FieldButton}" Margin="615,375,24,375" Background="Yellow" Click="clicked_yellowFinishOne" >
+                <Image Name="KrajZuti1" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </Grid>
+        <Button Name="ButtonPolje20" Style="{StaticResource FieldButton}" Margin="726,375,24,375" Click="clicked_FieldTwenty" >
+            <Image Name="Polje20" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje19" Style="{StaticResource FieldButton}" Margin="726,266,24,484" Click="clicked_FieldNineteen" >
+            <Image Name="Polje19"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje18" Style="{StaticResource FieldButton}" Margin="615,266,24,484" Click="clicked_FieldEighteen">
+            <Image Name="Polje18" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje17" Style="{StaticResource FieldButton}" Margin="615,266,135,484" Click="clicked_FieldSeventeen" >
+            <Image Name="Polje17"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje16" Style="{StaticResource FieldButton}" Margin="560,266,190,484" Click="clicked_FieldSixteen" >
+            <Image Name="Polje16" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje15" Style="{StaticResource FieldButton}" Margin="505,266,245,484" Click="clicked_FieldFifteen">
+            <Image Name="Polje15" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje14" Style="{StaticResource FieldButton}" Margin="505,211,245,539" Click="clicked_FieldFourteen" >
+            <Image Name="Polje14" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje13" Style="{StaticResource FieldButton}" Margin="505,156,245,594" Click="clicked_FieldThirteen" >
+            <Image Name="Polje13" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje12" Style="{StaticResource FieldButton}" Margin="505,101,245,649" Click="clicked_FieldTwelve" >
+            <Image Name="Polje12" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Grid>
+            <Button Name="ButtonPolje11" Style="{StaticResource FieldButton}" Margin="505,46,245,704" Background="Green" Click="clicked_FieldEleven">
+                <Image Name="Polje11" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZeleni1" Style="{StaticResource FieldButton}" Margin="375,101,375,649" Background="Green" Click="clicked_greenFinishOne" >
+                <Image Name="KrajZeleni1" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZeleni2" Style="{StaticResource FieldButton}" Margin="375,156,375,594" Background="Green" Click="clicked_greenFinishTwo" >
+                <Image Name="KrajZeleni2" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZeleni3" Style="{StaticResource FieldButton}" Margin="375,211,375,539" Background="Green" Click="clicked_greenFinishThree" >
+                <Image Name="KrajZeleni3" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="ButtonKrajZeleni4" Style="{StaticResource FieldButton}" Margin="375,266,375,484" Background="Green" >
+                <Image Name="KrajZeleni4" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Label Content="Turn Player:" FontSize="20" HorizontalAlignment="Left" Margin="285,0,0,0" VerticalAlignment="Top" Height="38" Width="115"/>
+            <Label FontSize="20" Name="Player" HorizontalAlignment="Left" Margin="405,0,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+        <Button Name="ButtonPolje10" Style="{StaticResource FieldButton}" Margin="375,46,375,704" Click="clicked_FieldTen" >
+            <Image Name="Polje10" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje9" Style="{StaticResource FieldButton}" Margin="245,46,505,704" Click="clicked_FieldNine" >
+            <Image Name="Polje9" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje8" Style="{StaticResource FieldButton}" Margin="245,101,505,649" Click="clicked_FieldEight" >
+            <Image Name="Polje8" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje7" Style="{StaticResource FieldButton}" Margin="245,156,505,594" Click="clicked_FieldSeven" >
+            <Image Name="Polje7" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje6" Style="{StaticResource FieldButton}" Margin="245,211,505,539" Click="clicked_FieldSix" >
+            <Image Name="Polje6" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje5" Style="{StaticResource FieldButton}" Margin="245,266,505,484" Click="clicked_FieldFive" >
+            <Image Name="Polje5"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje4" Style="{StaticResource FieldButton}" Margin="190,266,560,484" Click="clicked_FieldFour" >
+            <Image Name="Polje4" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje3" Style="{StaticResource FieldButton}" Margin="135,266,615,484" Click="clicked_FieldThree" >
+            <Image Name="Polje3"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Name="ButtonPolje2" Style="{StaticResource FieldButton}" Margin="80,266,670,484" Click="clicked_FieldTwo" >
+            <Image Name="Polje2" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+
+        <Image Name="Kocka" Source="Resources/kocka_1.png" Height="100" Width="100" MouseDown="dice_clicked"/>
+
+        <Label Content="Round:" HorizontalAlignment="Left" FontSize="20" Margin="80,325,0,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
+        <Label Name="RundaLijevi" Content="1" FontSize="20" Margin="0,323,455,0" VerticalAlignment="Top" HorizontalAlignment="Right" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
+
+        <Label Content="Round:"  FontSize="20" Margin="576,430,144,0" VerticalAlignment="Top" Height="49"/>
+        <Label Name="RundaDesni" Content="1" HorizontalAlignment="Right" FontSize="20" Margin="0,430,-19,0" VerticalAlignment="Top" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
+        <Label Name="VrijemeLijevi" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,427,505,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
+
+        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,325,172,0" VerticalAlignment="Top" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,429,652,0" VerticalAlignment="Top" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
+        <Label Name="VrijemeDesni" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,321,36,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
+
+    </Grid>
+</Window>
