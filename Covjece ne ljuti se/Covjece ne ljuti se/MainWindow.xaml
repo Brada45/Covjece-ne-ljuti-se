@@ -6,77 +6,83 @@
         xmlns:local="clr-namespace:Covjece_ne_ljuti_se"
         mc:Ignorable="d"
         ClipToBounds="False"
-        Title="MainWindow" Height="850" Width="800">
-    <Grid ClipToBounds="False" Height="800" Width="800">
-        <Grid Style="{StaticResource BigGrid}" Margin="24,25,576,575" Background="Red">
-            <Grid>
-                <Button Name="ButtonKucicaCrvena1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100"  Click="clicked_redHouseOne">
-                    <Image Name="KucicaCrvena1" Height="40" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                </Button>
-                <Button Name="ButtonKucicaCrvena2"  Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_redHouseTwo" >
-                    <Image Name="KucicaCrvena2" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaCrvena3"  Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_redHouseThree"  >
-                    <Image Name="KucicaCrvena3" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaCrvena4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_redHouseFour" >
-                    <Image Name="KucicaCrvena4" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
+        Title="MainWindow" Height="800" Width="800">
+    <Grid Height="800" Width="800">
 
-            </Grid>
+        <Grid Style="{StaticResource BigGrid}" Margin="24,46,566,544" Background="Red">
+            <Border BorderBrush="LightBlue" BorderThickness="3">
+                <Grid Height="210" Width="210" HorizontalAlignment="Center" VerticalAlignment="Center">
 
+                    <Button Name="ButtonKucicaCrvena1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="115,41,25,0"  Click="clicked_redHouseOne">
+                        <Image Name="KucicaCrvena1" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaCrvena2"  Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,41,115,0" Click="clicked_redHouseTwo" >
+                        <Image Name="KucicaCrvena2" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaCrvena3"  Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="115,121,25,41" Click="clicked_redHouseThree"  >
+                        <Image Name="KucicaCrvena3" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaCrvena4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,121,115,0" Click="clicked_redHouseFour" >
+                        <Image Name="KucicaCrvena4" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+
+                </Grid>
+            </Border>
         </Grid>
-        <Grid Style="{StaticResource BigGrid}" Margin="567,25,10,575" Background="Green">
-            <Grid>
-                <Button Name="ButtonKucicaZelena1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100" Click="clicked_greenHouseOne" >
-                    <Image Name="KucicaZelena1" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaZelena2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_greenHouseTwo" >
-                    <Image Name="KucicaZelena2"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaZelena3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_greenHouseThree"  >
-                    <Image Name="KucicaZelena3"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaZelena4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_greenHouseFour" >
-                    <Image Name="KucicaZelena4"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-            </Grid>
-
+        <Grid Style="{StaticResource BigGrid}" Margin="566,46,24,544" Background="Green">
+            <Border BorderBrush="LightBlue" BorderThickness="3">
+                <Grid Height="210" Width="210" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Name="ButtonKucicaZelena1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="115,41,25,0" Click="clicked_greenHouseOne" >
+                        <Image Name="KucicaZelena1" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaZelena2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,41,115,0" Click="clicked_greenHouseTwo" >
+                        <Image Name="KucicaZelena2"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaZelena3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="115,121,25,0" Click="clicked_greenHouseThree"  >
+                        <Image Name="KucicaZelena3"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaZelena4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,121,115,0" Click="clicked_greenHouseFour" >
+                        <Image Name="KucicaZelena4"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                </Grid>
+            </Border>
         </Grid>
-        <Grid Style="{StaticResource BigGrid}" Margin="24,566,576,34" Background="Blue" >
-            <Grid>
-                <Button Name="ButtonKucicaPlava1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100" Click="clicked_blueHouseOne" >
-                    <Image Name="KucicaPlava1"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaPlava2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_blueHouseTwo" >
-                    <Image Name="KucicaPlava2"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaPlava3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_blueHouseThree"  >
-                    <Image Name="KucicaPlava3"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaPlava4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_blueHouseFour" >
-                    <Image Name="KucicaPlava4"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
+        <Grid Style="{StaticResource BigGrid}" Margin="24,544,566,46" Background="Blue" >
+            <Border BorderBrush="LightBlue" BorderThickness="3">
+                <Grid Height="210" Width="210" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Name="ButtonKucicaPlava1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="115,41,25,0" Click="clicked_blueHouseOne" >
+                        <Image Name="KucicaPlava1"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaPlava2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,41,115,0" Click="clicked_blueHouseTwo" >
+                        <Image Name="KucicaPlava2"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaPlava3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="115,121,25,0" Click="clicked_blueHouseThree"  >
+                        <Image Name="KucicaPlava3"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaPlava4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,121,115,0" Click="clicked_blueHouseFour" >
+                        <Image Name="KucicaPlava4"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
 
-            </Grid>
-
+                </Grid>
+            </Border>
         </Grid>
-        <Grid Style="{StaticResource BigGrid}" Margin="576,542,24,10" Background="Yellow" >
-            <Grid>
-                <Button Name="ButtonKucicaZuta1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="100,20,20,100" Click="clicked_yellowHouseOne" >
-                    <Image Name="KucicaZuta1"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaZuta2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,20,100,100" Click="clicked_yellowHouseTwo" >
-                    <Image Name="KucicaZuta2" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaZuta3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="100,100,20,20" Click="clicked_yellowHouseThree"  >
-                    <Image Name="KucicaZuta3" Height="40" Width="60"  HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-                <Button Name="ButtonKucicaZuta4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="20,100,100,20" Click="clicked_yellowHouseFour" >
-                    <Image Name="KucicaZuta4" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Button>
-            </Grid>
-
+        <Grid Style="{StaticResource BigGrid}" Margin="566,541,24,49" Background="Yellow" >
+            <Border BorderBrush="LightBlue" BorderThickness="3">
+                <Grid Height="210" Width="210" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Name="ButtonKucicaZuta1" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="115,41,25,0" Click="clicked_yellowHouseOne" >
+                        <Image Name="KucicaZuta1"  Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaZuta2" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,41,115,0" Click="clicked_yellowHouseTwo" >
+                        <Image Name="KucicaZuta2" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaZuta3" Style="{StaticResource SmallButton}" Height="50" VerticalAlignment="Top" Margin="115,121,25,0" Click="clicked_yellowHouseThree"  >
+                        <Image Name="KucicaZuta3" Height="40" Width="60"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                    <Button Name="ButtonKucicaZuta4" Style="{StaticResource SmallButton}"  Height="50" VerticalAlignment="Top" Margin="25,121,115,0" Click="clicked_yellowHouseFour" >
+                        <Image Name="KucicaZuta4" Height="40" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Button>
+                </Grid>
+            </Border>
         </Grid>
 
         <Button Name="ButtonPolje1" Style="{StaticResource FieldButton}" Margin="24,266,726,484" Background="Red" Click="clicked_FieldOne" >
@@ -263,16 +269,16 @@
 
         <Image Name="Kocka" Source="Resources/kocka_1.png" Height="100" Width="100" MouseDown="dice_clicked"/>
 
-        <Label Content="Round:" HorizontalAlignment="Left" FontSize="20" Margin="80,325,0,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
-        <Label Name="RundaLijevi" Content="1" FontSize="20" Margin="0,323,455,0" VerticalAlignment="Top" HorizontalAlignment="Right" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Round:" HorizontalAlignment="Right" FontSize="20" Margin="0,326,655,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
+        <Label Name="RundaLijevi" Content="1" FontSize="20" Margin="0,324,505,0" VerticalAlignment="Top" HorizontalAlignment="Right" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
 
-        <Label Content="Round:"  FontSize="20" Margin="576,430,144,0" VerticalAlignment="Top" Height="49"/>
-        <Label Name="RundaDesni" Content="1" HorizontalAlignment="Right" FontSize="20" Margin="0,430,-19,0" VerticalAlignment="Top" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
-        <Label Name="VrijemeLijevi" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,427,505,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Round:"  FontSize="20" Margin="545,430,175,0" VerticalAlignment="Top" Height="49"/>
+        <Label Name="RundaDesni" Content="1" HorizontalAlignment="Right" FontSize="20" Margin="0,428,22,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
+        <Label Name="VrijemeLijevi" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,429,505,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
 
-        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,325,172,0" VerticalAlignment="Top" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
-        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,429,652,0" VerticalAlignment="Top" Height="49" Width="68" RenderTransformOrigin="1.188,0.511"/>
-        <Label Name="VrijemeDesni" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,321,36,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,326,175,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,430,655,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
+        <Label Name="VrijemeDesni" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,323,22,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
 
     </Grid>
 </Window>

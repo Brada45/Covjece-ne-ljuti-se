@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\CovjeceNeLjutiSe\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj": {}
+    "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\CovjeceNeLjutiSe\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj": {
+    "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\CovjeceNeLjutiSe\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj",
+        "projectUniqueName": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj",
         "projectName": "Covjece ne ljuti se",
-        "projectPath": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\CovjeceNeLjutiSe\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj",
+        "projectPath": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se.csproj",
         "packagesPath": "C:\\Users\\ksrdj.SRDJAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\CovjeceNeLjutiSe\\Covjece ne ljuti se\\Covjece ne ljuti se\\obj\\",
+        "outputPath": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ksrdj.SRDJAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

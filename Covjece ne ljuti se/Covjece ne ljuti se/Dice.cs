@@ -24,9 +24,9 @@ namespace Covjece_ne_ljuti_se
         }
         public int RollDice()
         {
-            int result = random.Next(1, 7);
-            string imageName = $"kocka_{result}.png"; 
-
+            int result = 0;
+            result=random.Next(1, 7);
+            string imageName = $"kocka_{result}.png";
             SetImage(imageName);
             return result;
         }
