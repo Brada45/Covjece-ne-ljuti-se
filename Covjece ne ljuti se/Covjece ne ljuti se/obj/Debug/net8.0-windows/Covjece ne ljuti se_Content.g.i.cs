@@ -10,6 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/crvenipijun.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/dice_throw.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fireworks.gif")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/kocka_1.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/kocka_2.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/kocka_3.png")]

@@ -225,5 +225,35 @@ namespace Covjece_ne_ljuti_se
             }
             return false;
         }
+
+        public bool checkEnd(Image firstEnd,Image secondEnd,Image thirdEnd, Image fourthEnd,int movement)
+        {
+            if (firstEnd.Source != null && movement == 1 && secondEnd.Source == null)
+            {
+                return secondEnd.Source == null;
+            }
+            else if (firstEnd.Source != null && movement == 2 && secondEnd.Source == null && thirdEnd.Source == null)
+            {
+                return thirdEnd.Source == null;
+            }
+            else if (firstEnd.Source != null && movement == 3 && secondEnd.Source == null && thirdEnd.Source == null && fourthEnd.Source == null)
+            {
+                return fourthEnd.Source == null;
+            }
+            else if (secondEnd.Source != null && movement == 1 && thirdEnd.Source == null)
+            {
+                return thirdEnd.Source == null;
+            }
+            else if (secondEnd.Source != null && movement == 2 && thirdEnd.Source == null && fourthEnd.Source == null)
+            {
+                return fourthEnd.Source == null;
+            }
+            else if (thirdEnd.Source != null && movement == 1 && fourthEnd.Source==null)
+            {
+                return fourthEnd.Source == null;
+            }
+            else
+                return false;
+        }
     }
 }

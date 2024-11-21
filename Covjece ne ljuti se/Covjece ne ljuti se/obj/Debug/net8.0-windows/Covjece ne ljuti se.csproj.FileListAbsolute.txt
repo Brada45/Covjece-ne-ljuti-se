@@ -111,3 +111,9 @@ C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\C
 C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\dice_throw.wav
 C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\ChoosePlayers.g.cs
 C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\ChoosePlayers.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Winner.g.cs
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Winner.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\fireworks.gif
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece ne ljuti se.csproj.AssemblyReference.cache
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Covjece .B6471564.Up2Date

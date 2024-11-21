@@ -25,8 +25,8 @@ namespace Covjece_ne_ljuti_se
     {
         Dice dice;
 
-        public int numOfPlayers = 2;
-        public int code = 1;
+        public int numOfPlayers = 0;
+        public int code = 0;
 
         int move = 0;
 
@@ -106,7 +106,6 @@ namespace Covjece_ne_ljuti_se
             service = new Service(fields);
             dice = new Dice(Kocka);
             initializePlayerTurn();
-            lockField(code);
             timer = new Timer(OnTimedEvent, null, 0, 1000);
             if(code==1 && numOfPlayers == 2)
             {
@@ -129,6 +128,8 @@ namespace Covjece_ne_ljuti_se
                 initializeGreenPlayer();
                 initializeBluePlayer();
             }
+
+            lockField(code);
         }
 
         public void initializeRedPlayer()
@@ -195,7 +196,17 @@ namespace Covjece_ne_ljuti_se
             });
         }
 
+        public bool checkAllThree()
+        {
 
+            bool houseBool = checkHouseOptions(move);
+            bool moveBool = checkPossibleMove(move);
+            bool endBool = checkEndOptions(move);
+            if (!houseBool && !moveBool && !endBool)
+                return true;
+            else
+                return false;
+        }
         private async void dice_clicked(object sender, MouseButtonEventArgs e)
         {
             if (played == true || round == 1)
@@ -216,7 +227,7 @@ namespace Covjece_ne_ljuti_se
                 Player.Content = Player.Content + " rolled";
 
             }
-            if (!checkHouseOptions(move) && !checkPossibleMove(move))
+            if (checkAllThree())
             {
                 findNextPlayer();
                 played = true;
@@ -314,7 +325,7 @@ namespace Covjece_ne_ljuti_se
             foreach (Image tmp in houses)
             {
                 Button parent = tmp.Parent as Button;
-                if (tmp.Source != null && tmp.Name.Contains(house))
+                if (tmp.Source != null && tmp.Name.ToString().Contains(house))
                     parent.IsEnabled = true;
                 else
                     parent.IsEnabled = false;
@@ -322,7 +333,7 @@ namespace Covjece_ne_ljuti_se
             foreach (Image tmp in finishes)
             {
                 Button parent = tmp.Parent as Button;
-                if (tmp.Source != null && tmp.Name.Contains(end))
+                if (tmp.Source != null && tmp.Name.ToString().Contains(end))
                     parent.IsEnabled = true;
                 else
                     parent.IsEnabled = false;
@@ -387,24 +398,28 @@ namespace Covjece_ne_ljuti_se
             {
                 check = service.goFinish(KrajCrveni1,KrajCrveni2,KrajCrveni3,KrajCrveni4,tmp,"crveniPijun.png");
                 if (check == true)
+                {
                     im.Source = null;
+                    return true;
+                }
                 if (check == false)
                 {
                     check = true;
                 }
-                return true;
             }
             else if (currentCode == 2 && tmp >= 11 && tmp <= 16 && (im.Name.Contains("10") || im.Name.Contains("9") || im.Name.Contains("8") || im.Name.Contains("7") || im.Name.Contains("6") || im.Name.Contains("5")))
             {
                 int moveTmp = tmp - 10;
                 check = service.goFinish(KrajZeleni1,KrajZeleni2,KrajZeleni3,KrajZeleni4,moveTmp,"zeleniPijun.png");
                 if (check == true)
+                {
                     im.Source = null;
+                    return true;
+                }
                 if (check == false)
                 {
                     check = true;
                 }
-                return true;
             }else if(currentCode == 3 && tmp >= 21 && tmp<=26 && (im.Name.Contains("20") || im.Name.Contains("19") || im.Name.Contains("18") || im.Name.Contains("17") || im.Name.Contains("16") || im.Name.Contains("15")))
             {
                 int moveTmp = tmp - 20;
@@ -412,12 +427,12 @@ namespace Covjece_ne_ljuti_se
                 if(check == true)
                 {
                     im.Source = null;
+                    return true;
                 }
                 if (check == false)
                 {
                     check=true; 
                 }
-                return true;
             }else if(currentCode==4 && tmp >= 31 && tmp<=36 && (im.Name.Contains("30") || im.Name.Contains("29") || im.Name.Contains("28") || im.Name.Contains("27") || im.Name.Contains("26") || im.Name.Contains("25")))
             {
                 int moveTmp = tmp - 30;
@@ -425,12 +440,12 @@ namespace Covjece_ne_ljuti_se
                 if (check == true)
                 {
                     im.Source = null;
+                    return true;
                 }
                 if(check == false)
                 {
                     check = true;
                 }
-                return true;
             }
             if (check == false)
             {
@@ -542,17 +557,31 @@ namespace Covjece_ne_ljuti_se
 
         public void finishMove(bool flag,int movement)
         {
-            if (move == 6)
+
+            checkEndGame();
+            if (movement == 6)
             {
                 played = true;
                 Player.Content = Player.Content.ToString().Split(" ")[0] + " roll";
                 lockField(code);
-                move = 0;
-                return;
+                if (flag == false)
+                {
+                    if(checkHouseOptions(movement) || checkPossibleMove(movement))
+                    {
+                        MessageBox.Show("Invalid move. There are other options");
+                        Player.Content = Player.Content.ToString().Split(" ")[0] + " rolled";
+                        return;
+                    }
+                }
+                else {
+                    move = 0;
+                    return;
+                }
+                
             }
             else if (flag == false)
             {
-                if (checkHouseOptions(movement) || checkPossibleMove(movement))
+                if (!checkAllThree())
                 {
                     MessageBox.Show("Invalid move. There are other options");
                     return;
@@ -562,12 +591,69 @@ namespace Covjece_ne_ljuti_se
                 move = 0;
                 findNextPlayer();
             }
-            else if (flag == true && move!=6)
+            else if (flag == true && movement!=6)
             {
                 findNextPlayer();
                 played = true;
                 move = 0;
             }
+        }
+
+        public void checkEndGame()
+        {
+            if(code==1 && KrajCrveni1.Source!=null && KrajCrveni2.Source!=null && KrajCrveni3.Source!=null && KrajCrveni4.Source != null)
+            {
+                Winner winner = new Winner();
+                winner.setWinner("red");
+                winner.Show();
+            }else if(code==2 && KrajZeleni1.Source!=null && KrajZeleni2.Source!=null && KrajZeleni3.Source!=null && KrajZeleni4.Source != null)
+            {
+                Winner winner = new Winner();
+                winner.setWinner("green");
+                winner.Show();
+            }else if(code==3 && KrajZuti1.Source!=null && KrajZuti2.Source!=null && KrajZuti3.Source!=null && KrajZuti4.Source != null)
+            {
+                Winner winner = new Winner();
+                winner.setWinner("yellow");
+                winner.Show();
+            }else if(code==4 && KrajPlavi1.Source!=null && KrajPlavi2.Source!=null && KrajPlavi3.Source!=null && KrajPlavi4.Source != null)
+            {
+                Winner winner = new Winner();
+                winner.setWinner("blue");
+                winner.Show();
+            }
+        }
+
+        public bool overturn(Image im,Image next,int tmpCode)
+        {
+            string stringCurrent = im.Name.ToString().Split("e")[1];
+            string stringNext = next.Name.ToString().Split("e")[1];
+            if(tmpCode==1 && (im.Name.Contains("35") || im.Name.Contains("36") || im.Name.Contains("37") || im.Name.Contains("38") || im.Name.Contains("39") || im.Name.Contains("40")))
+            {
+                if(stringNext.Equals("1") || stringNext.Equals("2") || stringNext.Equals("3") || stringNext.Equals("4") || stringNext.Equals("5") || stringNext.Equals("6"))
+                {
+                    return true;
+                }
+            }else if (tmpCode == 2 && (stringCurrent.Equals("5") || stringCurrent.Equals("6") || stringCurrent.Equals("7") || stringCurrent.Equals("8") || stringCurrent.Equals("9") || stringCurrent.Equals("10")))
+            {
+                if (stringNext.Equals("11") || stringNext.Equals("12") || stringNext.Equals("13") || stringNext.Equals("14") || stringNext.Equals("15") || stringNext.Equals("16"))
+                {
+                    return true;
+                }
+            }else if (tmpCode == 3 && (im.Name.Contains("15") || im.Name.Contains("16") || im.Name.Contains("17") || im.Name.Contains("18") || im.Name.Contains("19") || im.Name.Contains("20")))
+            {
+                if (stringNext.Equals("21") || stringNext.Equals("22") || stringNext.Equals("23") || stringNext.Equals("24") || stringNext.Equals("25") || stringNext.Equals("26"))
+                {
+                    return true;
+                }
+            }else if (tmpCode == 4 && (im.Name.Contains("25") || im.Name.Contains("26") || im.Name.Contains("27") || im.Name.Contains("28") || im.Name.Contains("29") || im.Name.Contains("30")))
+            {
+                if (stringNext.Equals("31") || stringNext.Equals("32") || stringNext.Equals("33") || stringNext.Equals("34") || stringNext.Equals("35") || stringNext.Equals("36"))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool checkPossibleMove(int movement)
@@ -594,32 +680,32 @@ namespace Covjece_ne_ljuti_se
                 {
                     continue;
                 }
-                if (tmpImage != null && !service.checkIdenticalImages(im, tmpImage))
+                if (tmpImage != null && !service.checkIdenticalImages(im, tmpImage) && !overturn(im,tmpImage,tmpCode))
                 {
                     found = true;
                 }
-                if (tmpCode == 1 && field >= 1 && field <= 6 && (tmpImage.Name.Contains("35") || tmpImage.Name.Contains("36") || tmpImage.Name.Contains("37") || tmpImage.Name.Contains("38") || tmpImage.Name.Contains("39") || tmpImage.Name.Contains("40")))
+                if (tmpCode == 1 && field >= 1 && field <= 6 && (im.Name.Contains("35") || im.Name.Contains("36") || im.Name.Contains("37") || im.Name.Contains("38") || im.Name.Contains("39") || im.Name.Contains("40")))
                 {
                     if (service.goFinish(KrajCrveni1, KrajCrveni2, KrajCrveni3, KrajCrveni4, field, "crveniPijun.png", true))
-                        found = true;
+                        return true;
                 }
-                else if (tmpCode == 2 && field >= 11 && field <= 16 && (tmpImage.Name.Contains("10") || tmpImage.Name.Contains("9") || tmpImage.Name.Contains("8") || tmpImage.Name.Contains("7") || tmpImage.Name.Contains("6") || tmpImage.Name.Contains("5")))
+                else if (tmpCode == 2 && field >= 11 && field <= 16 && (im.Name.Contains("10") || im.Name.Contains("9") || im.Name.Contains("8") || im.Name.Contains("7") || im.Name.Contains("6") || im.Name.Contains("5")))
                 {
                     int moveTmp = field - 10;
                     if (service.goFinish(KrajZeleni1, KrajZeleni2, KrajZeleni3, KrajZeleni4, moveTmp, "zeleniPijun.png", true))
-                        found = true;
+                        return true;
                 }
-                else if (tmpCode == 3 && field >= 21 && field <= 26 && (tmpImage.Name.Contains("20") || tmpImage.Name.Contains("19") || tmpImage.Name.Contains("18") || tmpImage.Name.Contains("17") || tmpImage.Name.Contains("16") || tmpImage.Name.Contains("15")))
+                else if (tmpCode == 3 && field >= 21 && field <= 26 && (im.Name.Contains("20") || im.Name.Contains("19") || im.Name.Contains("18") || im.Name.Contains("17") || im.Name.Contains("16") || im.Name.Contains("15")))
                 {
                     int moveTmp = field - 20;
                     if (service.goFinish(KrajZuti1, KrajZuti2, KrajZuti3, KrajZuti4, moveTmp, "zutiPijun.png", true))
-                        found = true;
+                        return true;
                 }
-                else if (tmpCode == 4 && field >= 31 && field <= 36 && (tmpImage.Name.Contains("30") || tmpImage.Name.Contains("29") || tmpImage.Name.Contains("28") || tmpImage.Name.Contains("27") || tmpImage.Name.Contains("26") || tmpImage.Name.Contains("25")))
+                else if (tmpCode == 4 && field >= 31 && field <= 36 && (im.Name.Contains("30") || im.Name.Contains("29") || im.Name.Contains("28") || im.Name.Contains("27") || im.Name.Contains("26") || im.Name.Contains("25")))
                 {
                     int moveTmp = field - 30;
                     if (service.goFinish(KrajPlavi1, KrajPlavi2, KrajPlavi3, KrajPlavi4, moveTmp, "plaviPijun.png", true))
-                        found = true;
+                        return true;
                 }
 
             }
@@ -658,13 +744,47 @@ namespace Covjece_ne_ljuti_se
             }
             return false;
         }
-        private void clicked_redHouseOne(object sender, RoutedEventArgs e)
+
+        public bool checkEndOptions(int movement)
         {
-            if (KucicaCrvena1.Source != null && move == 6)
+            if (code == 1)
             {
-                enter(KucicaCrvena1, Polje1, "crveniPijun.png");
+                    if (service.checkEnd(KrajCrveni1, KrajCrveni2, KrajCrveni3, KrajCrveni4, movement))
+                    {
+                        return true;
+                    }
             }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
+            else if (code == 2)
+            {
+                    if (service.checkEnd(KrajZeleni1, KrajZeleni2, KrajZeleni3, KrajZeleni4, movement))
+                    {
+                        return true;
+                    }
+            }
+            else if (code == 3)
+            {
+                    if (service.checkEnd(KrajZuti1, KrajZuti2, KrajZuti3, KrajZuti4, movement))
+                    {
+                        return true;
+                    }
+            }
+            else if (code == 4)
+            {
+                    if (service.checkEnd(KrajPlavi1, KrajPlavi2, KrajPlavi3, KrajPlavi4, movement))
+                    {
+                        return true;
+                    }
+            }
+            return false;
+        }
+
+        public void houseClicked(Image image,Image start, int movement,string picture)
+        {
+            if (image.Source != null && movement == 6)
+            {
+                enter(image, start, picture);
+            }
+            else if (!checkAllThree())
             {
                 MessageBox.Show("Invalid move. You have other options");
                 return;
@@ -675,294 +795,94 @@ namespace Covjece_ne_ljuti_se
             }
 
             played = true;
+        }
+        private void clicked_redHouseOne(object sender, RoutedEventArgs e)
+        {
+            houseClicked(KucicaCrvena1, Polje1, move, "crveniPijun.png");
         }
 
         private void clicked_redHouseTwo(object sender, RoutedEventArgs e)
         {
-            if (KucicaCrvena2.Source != null && move == 6)
-            {
-                enter(KucicaCrvena2, Polje1, "crveniPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
-
-            played = true;
+            houseClicked(KucicaCrvena2, Polje1, move, "crveniPijun.png");
         }
 
         private void clicked_redHouseThree(object sender, RoutedEventArgs e)
         {
-            if (KucicaCrvena3.Source != null && move == 6)
-            {
-                enter(KucicaCrvena3, Polje1, "crveniPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
-
-            played = true;
+            houseClicked(KucicaCrvena3, Polje1, move, "crveniPijun.png");
         }
 
         private void clicked_redHouseFour(object sender, RoutedEventArgs e)
         {
-            if (KucicaCrvena4.Source != null && move == 6)
-            {
-                enter(KucicaCrvena4, Polje1, "crveniPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
-
-            played = true;
+            houseClicked(KucicaCrvena4, Polje1, move, "crveniPijun.png");
         }
 
         private void clicked_greenHouseOne(object sender, RoutedEventArgs e)
         {
-            if (KucicaZelena1.Source != null && move == 6)
-            {
-                enter(KucicaZelena1, Polje11, "zeleniPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
-
-            played = true;
+            houseClicked(KucicaZelena1, Polje11, move, "zeleniPijun.png");
         }
 
         private void clicked_greenHouseTwo(object sender, RoutedEventArgs e)
         {
-            if (KucicaZelena2.Source != null && move == 6)
-            {
-                enter(KucicaZelena2, Polje11, "zeleniPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
-
-            played = true;
+            houseClicked(KucicaZelena2, Polje11, move, "zeleniPijun.png");
         }
-
-
-
 
         private void clicked_greenHouseThree(object sender, RoutedEventArgs e)
         {
-            if (KucicaZelena3.Source != null && move == 6)
-            {
-                enter(KucicaZelena3, Polje11, "zeleniPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
-
-            played = true;
+            houseClicked(KucicaZelena3, Polje11, move, "zeleniPijun.png");
         }
 
         private void clicked_greenHouseFour(object sender, RoutedEventArgs e)
         {
-            if (KucicaZelena4.Source != null && move == 6)
-            {
-                enter(KucicaZelena4, Polje11, "zeleniPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaZelena4, Polje11, move, "zeleniPijun.png");
 
-            played = true;
         }
 
         private void clicked_blueHouseOne(object sender, RoutedEventArgs e)
         {
-            if (KucicaPlava1.Source != null && move == 6)
-            {
-                enter(KucicaPlava1, Polje31, "plaviPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaPlava1, Polje31, move, "plaviPijun.png");
 
-            played = true;
         }
 
         private void clicked_blueHouseTwo(object sender, RoutedEventArgs e)
         {
-            if (KucicaPlava2.Source != null && move == 6)
-            {
-                enter(KucicaPlava2, Polje31, "plaviPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaPlava2, Polje31, move, "plaviPijun.png");
 
-            played = true;
         }
 
         private void clicked_blueHouseThree(object sender, RoutedEventArgs e)
         {
-            if (KucicaPlava3.Source != null && move == 6)
-            {
-                enter(KucicaPlava3, Polje31, "plaviPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaPlava3, Polje31, move, "plaviPijun.png");
 
-            played = true;
         }
 
         private void clicked_blueHouseFour(object sender, RoutedEventArgs e)
         {
-            if (KucicaPlava4.Source != null && move == 6)
-            {
-                enter(KucicaPlava4, Polje31, "plaviPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaPlava4, Polje31, move, "plaviPijun.png");
 
-            played = true;
         }
 
         private void clicked_yellowHouseOne(object sender, RoutedEventArgs e)
         {
-            if (KucicaZuta1.Source != null && move == 6)
-            {
-                enter(KucicaZuta1, Polje21, "zutiPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaZuta1, Polje21, move, "zutiPijun.png");
 
-            played = true;
         }
 
         private void clicked_yellowHouseTwo(object sender, RoutedEventArgs e)
         {
-            if (KucicaZuta2.Source != null && move == 6)
-            {
-                enter(KucicaZuta2, Polje21, "zutiPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaZuta2, Polje21, move, "zutiPijun.png");
 
-            played = true;
         }
 
         private void clicked_yellowHouseThree(object sender, RoutedEventArgs e)
         {
-            if (KucicaZuta3.Source != null && move == 6)
-            {
-                enter(KucicaZuta3, Polje21, "zutiPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaZuta3, Polje21, move, "zutiPijun.png");
 
-            played = true;
         }
 
         private void clicked_yellowHouseFour(object sender, RoutedEventArgs e)
         {
-            if (KucicaZuta4.Source != null && move == 6)
-            {
-                enter(KucicaZuta4, Polje21, "zutiPijun.png");
-            }
-            else if (checkPossibleMove(move) || checkHouseOptions(move))
-            {
-                MessageBox.Show("Invalid move. You have other options");
-                return;
-            }
-            else
-            {
-                findNextPlayer();
-            }
+            houseClicked(KucicaZuta4, Polje21, move, "zutiPijun.png");
 
-            played = true;
         }
         private void clicked_FieldOne(object sender, RoutedEventArgs e)
         {

@@ -10,6 +10,9 @@
     <Compile Update="ChoosePlayers.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Winner.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ChoosePlayers.xaml">
@@ -19,6 +22,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\GridBig.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Winner.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
