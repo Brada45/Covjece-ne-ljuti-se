@@ -21,11 +21,20 @@ namespace Covjece_ne_ljuti_se
     {
         List<Image> fields;
 
+        private string redPawn = "", greenPawn = "", yellowPawn = "", bluePawn = "";
+
         public Service() { }
 
         public Service(List<Image> fields)
         {
             this.fields= fields;
+        }
+        public void setPawns(string red,string green,string yellow,string blue)
+        {
+            redPawn= red;
+            greenPawn= green;
+            yellowPawn= yellow;
+            bluePawn= blue;
         }
 
         public int getCode(Image im)
@@ -34,19 +43,19 @@ namespace Covjece_ne_ljuti_se
             {
                 string imagePath = getPath(im);
 
-                if (AreImagesIdentical(imagePath, "Resources/crveniPijun.png"))
+                if (AreImagesIdentical(imagePath, redPawn))
                 {
                     return 1;
                 }
-                else if (AreImagesIdentical(imagePath, "Resources/zeleniPijun.png"))
+                else if (AreImagesIdentical(imagePath, greenPawn))
                 {
                     return 2;
                 }
-                else if (AreImagesIdentical(imagePath, "Resources/zutiPijun.png"))
+                else if (AreImagesIdentical(imagePath, yellowPawn))
                 {
                     return 3;
                 }
-                else if (AreImagesIdentical(imagePath, "Resources/plaviPijun.png"))
+                else if (AreImagesIdentical(imagePath, bluePawn))
                 {
                     return 4;
                 }
@@ -118,8 +127,8 @@ namespace Covjece_ne_ljuti_se
 
         public void setImage(Image image, string name)
         {
-            string imagePath = System.IO.Path.Combine("Resources", name);
-            image.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
+            //string imagePath = System.IO.Path.Combine("Resources", name);
+            image.Source = new BitmapImage(new Uri(name, UriKind.Relative));
         }
         public bool AreImagesIdentical(string imagePath1, string imagePath2)
         {

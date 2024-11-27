@@ -85,7 +85,7 @@
             </Border>
         </Grid>
 
-        <Button Name="ButtonPolje1" Style="{StaticResource FieldButton}" Margin="24,266,726,484" Background="Red" Click="clicked_FieldOne" >
+        <Button Name="ButtonPolje1" Style="{StaticResource FieldButton}" Margin="24,320,726,430" Background="Red" Click="clicked_FieldOne" >
             <Image  Name="Polje1" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Grid>
@@ -106,7 +106,7 @@
         <Button Name="ButtonPolje40" Style="{StaticResource FieldButton}" Margin="24,375,726,375" Click="clicked_FieldFourty" >
             <Image Name="Polje40"   Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
-        <Button Name="ButtonPolje39" Style="{StaticResource FieldButton}" Margin="24,478,726,272" Click="clicked_FieldThirtynine" >
+        <Button Name="ButtonPolje39" Style="{StaticResource FieldButton}" Margin="24,430,726,320" Click="clicked_FieldThirtynine" >
             <Image Name="Polje39"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Button Name="ButtonPolje38" Style="{StaticResource FieldButton}" Margin="24,478,615,272" Click="clicked_FieldThirtyeight" >
@@ -145,13 +145,13 @@
         <Button Name="ButtonPolje32" Style="{StaticResource FieldButton}" Margin="245,646,505,104" Click="clicked_FieldThirtytwo" >
             <Image Name="Polje32"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
-        <Button Name="ButtonPolje31"  Style="{StaticResource FieldButton}" Margin="245,700,505,48" Background="Blue" Click="clicked_FieldThiryone" >
+        <Button Name="ButtonPolje31"  Style="{StaticResource FieldButton}" Margin="301,704,449,46" Background="Blue" Click="clicked_FieldThiryone" >
             <Image Name="Polje31" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Button Name="ButtonPolje30" Style="{StaticResource FieldButton}" Margin="375,700,375,48" Click="clicked_FieldThirty" >
             <Image Name="Polje30" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
-        <Button Name="ButtonPolje29" Style="{StaticResource FieldButton}" Margin="505,700,245,48" Click="clicked_FieldTwentynine" >
+        <Button Name="ButtonPolje29" Style="{StaticResource FieldButton}" Margin="449,701,301,49" Click="clicked_FieldTwentynine" >
             <Image Name="Polje29" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Button Name="ButtonPolje28" Style="{StaticResource FieldButton}" Margin="505,646,245,104" Click="clicked_FieldTwentyeight">
@@ -176,7 +176,7 @@
             <Image Name="Polje22" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Grid>
-            <Button Name="ButtonPolje21"  Style="{StaticResource FieldButton}" Margin="726,478,24,272" Background="Yellow" Click="clicked_FieldTwentyone" >
+            <Button Name="ButtonPolje21"  Style="{StaticResource FieldButton}" Margin="726,430,24,320" Background="Yellow" Click="clicked_FieldTwentyone" >
                 <Image Name="Polje21" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
             <Button Name="ButtonKrajZuti4"  Style="{StaticResource FieldButton}" Margin="505,375,245,375" Background="Yellow" >
@@ -195,7 +195,7 @@
         <Button Name="ButtonPolje20" Style="{StaticResource FieldButton}" Margin="726,375,24,375" Click="clicked_FieldTwenty" >
             <Image Name="Polje20" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
-        <Button Name="ButtonPolje19" Style="{StaticResource FieldButton}" Margin="726,266,24,484" Click="clicked_FieldNineteen" >
+        <Button Name="ButtonPolje19" Style="{StaticResource FieldButton}" Margin="726,320,24,430" Click="clicked_FieldNineteen" >
             <Image Name="Polje19"  Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Button Name="ButtonPolje18" Style="{StaticResource FieldButton}" Margin="615,266,24,484" Click="clicked_FieldEighteen">
@@ -220,7 +220,7 @@
             <Image Name="Polje12" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Grid>
-            <Button Name="ButtonPolje11" Style="{StaticResource FieldButton}" Margin="505,46,245,704" Background="Green" Click="clicked_FieldEleven">
+            <Button Name="ButtonPolje11" Style="{StaticResource FieldButton}" Margin="449,46,301,704" Background="Green" Click="clicked_FieldEleven">
                 <Image Name="Polje11" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
             <Button Name="ButtonKrajZeleni1" Style="{StaticResource FieldButton}" Margin="375,101,375,649" Background="Green" Click="clicked_greenFinishOne" >
@@ -242,7 +242,7 @@
         <Button Name="ButtonPolje10" Style="{StaticResource FieldButton}" Margin="375,46,375,704" Click="clicked_FieldTen" >
             <Image Name="Polje10" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
-        <Button Name="ButtonPolje9" Style="{StaticResource FieldButton}" Margin="245,46,505,704" Click="clicked_FieldNine" >
+        <Button Name="ButtonPolje9" Style="{StaticResource FieldButton}" Margin="301,46,449,704" Click="clicked_FieldNine" >
             <Image Name="Polje9" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
         <Button Name="ButtonPolje8" Style="{StaticResource FieldButton}" Margin="245,101,505,649" Click="clicked_FieldEight" >
@@ -269,16 +269,16 @@
 
         <Image Name="Kocka" Source="Resources/kocka_1.png" Height="100" Width="100" MouseDown="dice_clicked"/>
 
-        <Label Content="Round:" HorizontalAlignment="Right" FontSize="20" Margin="0,326,655,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Round:" HorizontalAlignment="Right" FontSize="20" Margin="0,323,640,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
         <Label Name="RundaLijevi" Content="1" FontSize="20" Margin="0,324,505,0" VerticalAlignment="Top" HorizontalAlignment="Right" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
 
-        <Label Content="Round:"  FontSize="20" Margin="545,430,175,0" VerticalAlignment="Top" Height="49"/>
-        <Label Name="RundaDesni" Content="1" HorizontalAlignment="Right" FontSize="20" Margin="0,428,22,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Round:"  FontSize="20" Margin="505,428,215,0" VerticalAlignment="Top" Height="49"/>
+        <Label Name="RundaDesni" Content="1" HorizontalAlignment="Right" FontSize="20" Margin="0,428,80,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
         <Label Name="VrijemeLijevi" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,429,505,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
 
-        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,326,175,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
-        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,430,655,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
-        <Label Name="VrijemeDesni" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,323,22,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,324,215,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
+        <Label Content="Time:" HorizontalAlignment="Right" FontSize="20" Margin="0,430,640,0" VerticalAlignment="Top" Height="49" Width="80" RenderTransformOrigin="1.188,0.511"/>
+        <Label Name="VrijemeDesni" Content="00:00:00" HorizontalAlignment="Right" FontSize="20" Margin="0,323,80,0" VerticalAlignment="Top" Height="49" Width="94" RenderTransformOrigin="1.188,0.511"/>
 
     </Grid>
 </Window>

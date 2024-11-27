@@ -36,5 +36,12 @@ namespace Covjece_ne_ljuti_se
             mediaPlayer.Position = new TimeSpan(0, 0, 1);
             mediaPlayer.Play();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ChoosePlayers choosePlayers = new ChoosePlayers();
+            choosePlayers.Show();
+            this.Close(); 
+        }
     }
 }

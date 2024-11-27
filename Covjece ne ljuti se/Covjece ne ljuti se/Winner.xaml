@@ -11,6 +11,7 @@
         <MediaElement Name="mediaPlayer" Height="600" Width="600" Source="Resources/fireworks.gif" LoadedBehavior="Play" 
                       UnloadedBehavior="Manual" 
                       MediaEnded="MediaPlayer_MediaEnded" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label Name="Player" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Label Name="Player" Foreground="White" FontStyle="Italic"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Button Content="Play again" FontSize="20" BorderThickness="0" Foreground="White" Background="Transparent" HorizontalAlignment="Center" Margin="0,428,0,0" VerticalAlignment="Top" Height="46" Width="141" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -5,34 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Covjece_ne_ljuti_se"
         mc:Ignorable="d"
-        Title="ChoosePlayers" Height="500" Width="300">
-    <Grid>
-       
-        <Label Content="2 Player" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,60" />
-        <Button Height="40" Width="86" HorizontalAlignment="Left" Margin="104,95,0,0" BorderBrush="LightBlue" BorderThickness="3"  VerticalAlignment="Top" Click="clicked_TwoRedYellow">
+        Title="ChoosePlayers" Height="420" Width="300">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Image Source="Resources/main_screen.jpg"/>
+        <Label Content="2 Player" FontSize="20" HorizontalAlignment="Left" Margin="0,67,0,3" />
+        <Button Height="40" Width="86" HorizontalAlignment="Left" Margin="189,94,0,0" BorderBrush="LightBlue" BorderThickness="3"  VerticalAlignment="Top" Click="clicked_TwoRedYellow">
             <Grid>
                 <Grid Width="40" Height="34" Margin="0,0,40,0"  Background="Red"/>
                 <Grid Width="40" Height="34" Margin="36,0,0,0"  Background="Yellow"/>
             </Grid>
         </Button>
 
-        <Button Height="40" Width="86" HorizontalAlignment="Left" Margin="104,50,0,0" BorderBrush="LightBlue" BorderThickness="3"  VerticalAlignment="Top" Click="clicked_TwoGreenBlue">
+        <Button Height="40" Width="86" HorizontalAlignment="Left" Margin="189,40,0,0" BorderBrush="LightBlue" BorderThickness="3"  VerticalAlignment="Top" Click="clicked_TwoGreenBlue">
             <Grid>
                 <Grid Width="40" Height="34" Margin="0,0,40,0"  Background="Green"/>
                 <Grid Width="40" Height="34" Margin="36,0,0,0"  Background="Blue"/>
             </Grid>
         </Button>
-        <Label Content="3 Player" FontSize="20" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top"/>
-        <Button Height="40" Width="126" BorderBrush="LightBlue" BorderThickness="3" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Click="clicked_Three">
+        <Label Content="3 Player" FontSize="20" HorizontalAlignment="Left" Margin="0,188,0,0" VerticalAlignment="Top"/>
+        <Button Height="40" Width="126" BorderBrush="LightBlue" BorderThickness="3" HorizontalAlignment="Left" Margin="152,188,0,0" VerticalAlignment="Top" Click="clicked_Three">
             <Grid>
                 <Grid Width="40" Height="34" Margin="0,0,80,0"  Background="Red"/>
                 <Grid Width="40" Height="34" Margin="36,0,40,0"  Background="Green"/>
                 <Grid Width="40" Height="34" Margin="78,0,0,0" Background="Yellow"/>
             </Grid>
         </Button>
-        <Label Content="4 Player" HorizontalAlignment="Center" FontSize="20" Margin="0,290,0,0" VerticalAlignment="Top"/>
+        <Label Content="4 Player" HorizontalAlignment="Left" FontSize="20" Margin="0,288,0,0" VerticalAlignment="Top"/>
 
-        <Button Width="166" Height="40" BorderBrush="LightBlue" BorderThickness="3" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Click="clicked_Four">
+        <Button Width="166" Height="40" BorderBrush="LightBlue" BorderThickness="3" HorizontalAlignment="Left" Margin="109,288,0,0" VerticalAlignment="Top" Click="clicked_Four">
             <Grid>
                 <Grid Width="40" Height="34" Margin="0,0,120,0"  Background="Red"/>
                 <Grid Width="40" Height="34" Margin="36,0,80,0"  Background="Green"/>

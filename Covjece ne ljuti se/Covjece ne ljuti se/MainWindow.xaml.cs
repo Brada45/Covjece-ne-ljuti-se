@@ -46,10 +46,18 @@ namespace Covjece_ne_ljuti_se
         List<Image> finishYellow = new List<Image>();
         List<Image> finishBlue = new List<Image>();
 
+        string redImage = "";
+        string greenImage = "";
+        string yellowImage = "";
+        string blueImage = "";
+        string sound = "";
+
         Service service;
 
         static Timer timer;
         static int seconds = 0;
+
+        Dictionary<string, string> properties = null;
 
         public MainWindow()
         {
@@ -97,7 +105,34 @@ namespace Covjece_ne_ljuti_se
             buttonHouses.Add(ButtonKucicaPlava1); buttonHouses.Add(ButtonKucicaPlava2); buttonHouses.Add(ButtonKucicaPlava4); buttonHouses.Add(ButtonKucicaPlava4);
             houses.Add(KucicaPlava1); houses.Add(KucicaPlava2); houses.Add(KucicaPlava3); houses.Add(KucicaPlava4);
 
-            
+
+            string filePath = "Resources/config.properties";
+            properties= LoadProperties(filePath);
+
+            sound = properties["dice_throw"];
+        }
+
+        static Dictionary<string, string> LoadProperties(string filePath)
+        {
+            var properties = new Dictionary<string, string>();
+
+            if (!File.Exists(filePath))
+            {
+                throw new FileNotFoundException($"Properties file not found: {filePath}");
+            }
+
+            foreach (var line in File.ReadAllLines(filePath))
+            {
+                if (line.Trim().StartsWith("#") || string.IsNullOrWhiteSpace(line)) continue; 
+
+                var parts = line.Split('=', 2);
+                if (parts.Length == 2)
+                {
+                    properties[parts[0].Trim()] = parts[1].Trim();
+                }
+            }
+
+            return properties;
         }
 
         public void setParameters()
@@ -106,6 +141,7 @@ namespace Covjece_ne_ljuti_se
             service = new Service(fields);
             dice = new Dice(Kocka);
             initializePlayerTurn();
+            seconds = 0;
             timer = new Timer(OnTimedEvent, null, 0, 1000);
             if(code==1 && numOfPlayers == 2)
             {
@@ -128,42 +164,47 @@ namespace Covjece_ne_ljuti_se
                 initializeGreenPlayer();
                 initializeBluePlayer();
             }
-
+            service.setPawns(redImage, greenImage, yellowImage, blueImage);
             lockField(code);
         }
 
         public void initializeRedPlayer()
         {
-            service.setImage(KucicaCrvena1, "crveniPijun.png");
-            service.setImage(KucicaCrvena2, "crveniPijun.png");
-            service.setImage(KucicaCrvena3, "crveniPijun.png");
-            service.setImage(KucicaCrvena4, "crveniPijun.png");
+            redImage = properties["redPawn"];
+            service.setImage(KucicaCrvena1, redImage);
+            service.setImage(KucicaCrvena2, redImage);
+            service.setImage(KucicaCrvena3, redImage);
+            service.setImage(KucicaCrvena4, redImage);
 
         }
 
         public void initializeGreenPlayer()
         {
-            service.setImage(KucicaZelena1, "zeleniPijun.png");
-            service.setImage(KucicaZelena2, "zeleniPijun.png");
-            service.setImage(KucicaZelena3, "zeleniPijun.png");
-            service.setImage(KucicaZelena4, "zeleniPijun.png");
+            greenImage = properties["greenPawn"];
+            
+            service.setImage(KucicaZelena1, greenImage);
+            service.setImage(KucicaZelena2, greenImage);
+            service.setImage(KucicaZelena3, greenImage);
+            service.setImage(KucicaZelena4, greenImage);
 
         }
 
         public void initializeBluePlayer()
         {
-            service.setImage(KucicaPlava1, "plaviPijun.png");
-            service.setImage(KucicaPlava2, "plaviPijun.png");
-            service.setImage(KucicaPlava3, "plaviPijun.png");
-            service.setImage(KucicaPlava4, "plaviPijun.png");
+            blueImage = properties["bluePawn"];
+            service.setImage(KucicaPlava1, blueImage);
+            service.setImage(KucicaPlava2, blueImage);
+            service.setImage(KucicaPlava3, blueImage);
+            service.setImage(KucicaPlava4, blueImage);
         }
 
         public void initializeYellowPlayer()
         {
-            service.setImage(KucicaZuta1, "zutiPijun.png");
-            service.setImage(KucicaZuta2, "zutiPijun.png");
-            service.setImage(KucicaZuta3, "zutiPijun.png");
-            service.setImage(KucicaZuta4, "zutiPijun.png");
+            yellowImage = properties["yellowPawn"];
+            service.setImage(KucicaZuta1, yellowImage);
+            service.setImage(KucicaZuta2, yellowImage);
+            service.setImage(KucicaZuta3, yellowImage);
+            service.setImage(KucicaZuta4, yellowImage);
 
         }
 
@@ -211,7 +252,7 @@ namespace Covjece_ne_ljuti_se
         {
             if (played == true || round == 1)
             {
-                SoundPlayer player = new SoundPlayer("Resources/dice_throw.wav");
+                SoundPlayer player = new SoundPlayer(sound);
 
                 player.Play();
                 await Task.Delay(500);
@@ -227,10 +268,14 @@ namespace Covjece_ne_ljuti_se
                 Player.Content = Player.Content + " rolled";
 
             }
-            if (checkAllThree())
+            if (checkAllThree() )
             {
-                findNextPlayer();
+                if(move!=6)
+                    findNextPlayer();
+                else
+                    Player.Content = Player.Content.ToString().Split(" ")[0]+" roll";
                 played = true;
+                move = 0;
             } else
                 played = false;
         }
@@ -244,19 +289,19 @@ namespace Covjece_ne_ljuti_se
             {
                 if (KucicaCrvena1.Source == null)
                 {
-                    service.setImage(KucicaCrvena1, "crveniPijun.png");
+                    service.setImage(KucicaCrvena1, redImage);
                 }
                 else if (KucicaCrvena2.Source == null)
                 {
-                    service.setImage(KucicaCrvena2, "crveniPijun.png");
+                    service.setImage(KucicaCrvena2, redImage);
                 }
                 else if (KucicaCrvena3.Source == null)
                 {
-                    service.setImage(KucicaCrvena3, "crveniPijun.png");
+                    service.setImage(KucicaCrvena3, redImage);
                 }
                 else if (KucicaCrvena4.Source == null)
                 {
-                    service.setImage(KucicaCrvena4, "crveniPijun.png");
+                    service.setImage(KucicaCrvena4, redImage);
                 }
                 return true;
             }
@@ -264,57 +309,57 @@ namespace Covjece_ne_ljuti_se
             {
                 if (KucicaZelena1.Source == null)
                 {
-                    service.setImage(KucicaZelena1, "zeleniPijun.png");
+                    service.setImage(KucicaZelena1, greenImage);
                 }
                 else if (KucicaZelena2.Source == null)
                 {
-                    service.setImage(KucicaZelena2, "zeleniPijun.png");
+                    service.setImage(KucicaZelena2, greenImage);
                 }
                 else if (KucicaZelena3.Source == null)
                 {
-                    service.setImage(KucicaZelena3, "zeleniPijun.png");
+                    service.setImage(KucicaZelena3, greenImage);
                 }
                 else if (KucicaZelena4.Source == null)
                 {
-                    service.setImage(KucicaZelena4, "zeleniPijun.png");
+                    service.setImage(KucicaZelena4, greenImage);
                 }
                 return true;
             } else if (tmp == 3 && code != 3)
             {
                 if (KucicaZuta1.Source == null)
                 {
-                    service.setImage(KucicaZuta1, "zutiPijun.png");
+                    service.setImage(KucicaZuta1, yellowImage);
                 }
                 else if (KucicaZuta2.Source == null)
                 {
-                    service.setImage(KucicaZuta2, "zutiPijun.png");
+                    service.setImage(KucicaZuta2, yellowImage);
                 }
                 else if (KucicaZuta3.Source == null)
                 {
-                    service.setImage(KucicaZuta3, "zutaPijun.png");
+                    service.setImage(KucicaZuta3, yellowImage);
                 }
-                else if (KucicaZelena4.Source == null)
+                else if (KucicaZuta4.Source == null)
                 {
-                    service.setImage(KucicaZuta4, "zutaPijun.png");
+                    service.setImage(KucicaZuta4, yellowImage);
                 }
                 return true;
             } else if (tmp == 4 && code != 4)
             {
                 if (KucicaPlava1.Source == null)
                 {
-                    service.setImage(KucicaPlava1, "plaviPijun.png");
+                    service.setImage(KucicaPlava1, blueImage);
                 }
                 else if (KucicaPlava2.Source == null)
                 {
-                    service.setImage(KucicaPlava2, "plaviPijun.png");
+                    service.setImage(KucicaPlava2, blueImage);
                 }
                 else if (KucicaPlava3.Source == null)
                 {
-                    service.setImage(KucicaPlava3, "plaviPijun.png");
+                    service.setImage(KucicaPlava3, blueImage);
                 }
                 else if (KucicaPlava4.Source == null)
                 {
-                    service.setImage(KucicaPlava4, "plaviPijun.png");
+                    service.setImage(KucicaPlava4, blueImage);
                 }
                 return true;
             }
@@ -352,16 +397,16 @@ namespace Covjece_ne_ljuti_se
         {
             if (tmpCode == 1)
             {
-                lockExact("Crvena", "Crveni", "Resources/crveniPijun.png");   
+                lockExact("Crvena", "Crveni", redImage);   
             }else if (tmpCode == 2)
             {
-                lockExact("Zelena", "Zeleni", "Resources/zeleniPijun.png");
+                lockExact("Zelena", "Zeleni", greenImage);
             }else if(tmpCode == 3)
             {
-                lockExact("Zuta", "Zuti", "Resources/zutiPijun.png");
+                lockExact("Zuta", "Zuti", yellowImage);
             }else if(tmpCode == 4)
             {
-                lockExact("Plava", "Plavi", "Resources/plaviPijun.png");
+                lockExact("Plava", "Plavi", blueImage);
             }
         }
 
@@ -387,6 +432,7 @@ namespace Covjece_ne_ljuti_se
 
         public bool go(int currentField,int movement,Image im)
         {
+           
             int tmp = currentField + movement;
             int currentCode=service.getCode(im);
             bool check=false;
@@ -396,7 +442,7 @@ namespace Covjece_ne_ljuti_se
             }
             if (currentCode == 1 && tmp >= 1 && tmp <= 6 && (im.Name.Contains("35") || im.Name.Contains("36") || im.Name.Contains("37") || im.Name.Contains("38") || im.Name.Contains("39") || im.Name.Contains("40")))
             {
-                check = service.goFinish(KrajCrveni1,KrajCrveni2,KrajCrveni3,KrajCrveni4,tmp,"crveniPijun.png");
+                check = service.goFinish(KrajCrveni1,KrajCrveni2,KrajCrveni3,KrajCrveni4,tmp,redImage);
                 if (check == true)
                 {
                     im.Source = null;
@@ -407,10 +453,10 @@ namespace Covjece_ne_ljuti_se
                     check = true;
                 }
             }
-            else if (currentCode == 2 && tmp >= 11 && tmp <= 16 && (im.Name.Contains("10") || im.Name.Contains("9") || im.Name.Contains("8") || im.Name.Contains("7") || im.Name.Contains("6") || im.Name.Contains("5")))
+            else if (currentCode == 2 && tmp >= 11 && tmp <= 16 && (im.Name.Contains("10") || im.Name.ToString().Split("e")[1].Equals("9") || im.Name.ToString().Split("e")[1].Equals("8") || im.Name.ToString().Split("e")[1].Equals("7") || im.Name.ToString().Split("e")[1].Equals("6") || im.Name.ToString().Split("e")[1].Equals("5")))
             {
                 int moveTmp = tmp - 10;
-                check = service.goFinish(KrajZeleni1,KrajZeleni2,KrajZeleni3,KrajZeleni4,moveTmp,"zeleniPijun.png");
+                check = service.goFinish(KrajZeleni1,KrajZeleni2,KrajZeleni3,KrajZeleni4,moveTmp,greenImage);
                 if (check == true)
                 {
                     im.Source = null;
@@ -423,7 +469,7 @@ namespace Covjece_ne_ljuti_se
             }else if(currentCode == 3 && tmp >= 21 && tmp<=26 && (im.Name.Contains("20") || im.Name.Contains("19") || im.Name.Contains("18") || im.Name.Contains("17") || im.Name.Contains("16") || im.Name.Contains("15")))
             {
                 int moveTmp = tmp - 20;
-                check = service.goFinish(KrajZuti1,KrajZuti2,KrajZuti3,KrajZuti4,moveTmp,"zutiPijun.png");
+                check = service.goFinish(KrajZuti1,KrajZuti2,KrajZuti3,KrajZuti4,moveTmp,yellowImage);
                 if(check == true)
                 {
                     im.Source = null;
@@ -436,7 +482,7 @@ namespace Covjece_ne_ljuti_se
             }else if(currentCode==4 && tmp >= 31 && tmp<=36 && (im.Name.Contains("30") || im.Name.Contains("29") || im.Name.Contains("28") || im.Name.Contains("27") || im.Name.Contains("26") || im.Name.Contains("25")))
             {
                 int moveTmp = tmp - 30;
-                check=service.goFinish(KrajPlavi1,KrajPlavi2,KrajPlavi3,KrajPlavi4,moveTmp,"plaviPijun.png");
+                check=service.goFinish(KrajPlavi1,KrajPlavi2,KrajPlavi3,KrajPlavi4,moveTmp,blueImage);
                 if (check == true)
                 {
                     im.Source = null;
@@ -601,26 +647,33 @@ namespace Covjece_ne_ljuti_se
 
         public void checkEndGame()
         {
-            if(code==1 && KrajCrveni1.Source!=null && KrajCrveni2.Source!=null && KrajCrveni3.Source!=null && KrajCrveni4.Source != null)
+            if (code == 1 && KrajCrveni1.Source != null && KrajCrveni2.Source != null && KrajCrveni3.Source != null && KrajCrveni4.Source != null)
             {
                 Winner winner = new Winner();
                 winner.setWinner("red");
                 winner.Show();
-            }else if(code==2 && KrajZeleni1.Source!=null && KrajZeleni2.Source!=null && KrajZeleni3.Source!=null && KrajZeleni4.Source != null)
+                this.Close();
+            }
+            else if (code == 2 && KrajZeleni1.Source != null && KrajZeleni2.Source != null && KrajZeleni3.Source != null && KrajZeleni4.Source != null)
             {
                 Winner winner = new Winner();
                 winner.setWinner("green");
                 winner.Show();
-            }else if(code==3 && KrajZuti1.Source!=null && KrajZuti2.Source!=null && KrajZuti3.Source!=null && KrajZuti4.Source != null)
+                this.Close();
+            }
+            else if (code == 3 && KrajZuti1.Source != null && KrajZuti2.Source != null && KrajZuti3.Source != null && KrajZuti4.Source != null)
             {
                 Winner winner = new Winner();
                 winner.setWinner("yellow");
                 winner.Show();
-            }else if(code==4 && KrajPlavi1.Source!=null && KrajPlavi2.Source!=null && KrajPlavi3.Source!=null && KrajPlavi4.Source != null)
+                this.Close();
+            }
+            else if (code == 4 && KrajPlavi1.Source != null && KrajPlavi2.Source != null && KrajPlavi3.Source != null && KrajPlavi4.Source != null)
             {
                 Winner winner = new Winner();
                 winner.setWinner("blue");
                 winner.Show();
+                this.Close();
             }
         }
 
@@ -686,25 +739,25 @@ namespace Covjece_ne_ljuti_se
                 }
                 if (tmpCode == 1 && field >= 1 && field <= 6 && (im.Name.Contains("35") || im.Name.Contains("36") || im.Name.Contains("37") || im.Name.Contains("38") || im.Name.Contains("39") || im.Name.Contains("40")))
                 {
-                    if (service.goFinish(KrajCrveni1, KrajCrveni2, KrajCrveni3, KrajCrveni4, field, "crveniPijun.png", true))
+                    if (service.goFinish(KrajCrveni1, KrajCrveni2, KrajCrveni3, KrajCrveni4, field, redImage, true))
                         return true;
                 }
-                else if (tmpCode == 2 && field >= 11 && field <= 16 && (im.Name.Contains("10") || im.Name.Contains("9") || im.Name.Contains("8") || im.Name.Contains("7") || im.Name.Contains("6") || im.Name.Contains("5")))
+                else if (tmpCode == 2 && field >= 11 && field <= 16 && (im.Name.Contains("10") || im.Name.ToString().Split("e")[1].Equals("9") || im.Name.ToString().Split("e")[1].Equals("8") || im.Name.ToString().Split("e")[1].Equals("7") || im.Name.ToString().Split("e")[1].Equals("6") || im.Name.ToString().Split("e")[1].Equals("5")))
                 {
                     int moveTmp = field - 10;
-                    if (service.goFinish(KrajZeleni1, KrajZeleni2, KrajZeleni3, KrajZeleni4, moveTmp, "zeleniPijun.png", true))
+                    if (service.goFinish(KrajZeleni1, KrajZeleni2, KrajZeleni3, KrajZeleni4, moveTmp, greenImage, true))
                         return true;
                 }
                 else if (tmpCode == 3 && field >= 21 && field <= 26 && (im.Name.Contains("20") || im.Name.Contains("19") || im.Name.Contains("18") || im.Name.Contains("17") || im.Name.Contains("16") || im.Name.Contains("15")))
                 {
                     int moveTmp = field - 20;
-                    if (service.goFinish(KrajZuti1, KrajZuti2, KrajZuti3, KrajZuti4, moveTmp, "zutiPijun.png", true))
+                    if (service.goFinish(KrajZuti1, KrajZuti2, KrajZuti3, KrajZuti4, moveTmp, yellowImage, true))
                         return true;
                 }
                 else if (tmpCode == 4 && field >= 31 && field <= 36 && (im.Name.Contains("30") || im.Name.Contains("29") || im.Name.Contains("28") || im.Name.Contains("27") || im.Name.Contains("26") || im.Name.Contains("25")))
                 {
                     int moveTmp = field - 30;
-                    if (service.goFinish(KrajPlavi1, KrajPlavi2, KrajPlavi3, KrajPlavi4, moveTmp, "plaviPijun.png", true))
+                    if (service.goFinish(KrajPlavi1, KrajPlavi2, KrajPlavi3, KrajPlavi4, moveTmp, blueImage, true))
                         return true;
                 }
 
@@ -796,330 +849,452 @@ namespace Covjece_ne_ljuti_se
 
             played = true;
         }
+
+        public bool checkMoveZero(int movement)
+        {
+            if (movement == 0)
+            {
+                MessageBox.Show("You have to roll first.");
+                return true;
+            }
+            return false;
+        }
         private void clicked_redHouseOne(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaCrvena1, Polje1, move, "crveniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaCrvena1, Polje1, move, redImage);
         }
 
         private void clicked_redHouseTwo(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaCrvena2, Polje1, move, "crveniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaCrvena2, Polje1, move, redImage);
         }
 
         private void clicked_redHouseThree(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaCrvena3, Polje1, move, "crveniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaCrvena3, Polje1, move, redImage);
         }
 
         private void clicked_redHouseFour(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaCrvena4, Polje1, move, "crveniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaCrvena4, Polje1, move, redImage);
         }
 
         private void clicked_greenHouseOne(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZelena1, Polje11, move, "zeleniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZelena1, Polje11, move, greenImage);
         }
 
         private void clicked_greenHouseTwo(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZelena2, Polje11, move, "zeleniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZelena2, Polje11, move, greenImage);
         }
 
         private void clicked_greenHouseThree(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZelena3, Polje11, move, "zeleniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZelena3, Polje11, move, greenImage);
         }
 
         private void clicked_greenHouseFour(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZelena4, Polje11, move, "zeleniPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZelena4, Polje11, move, greenImage);
 
         }
 
         private void clicked_blueHouseOne(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaPlava1, Polje31, move, "plaviPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaPlava1, Polje31, move, blueImage);
 
         }
 
         private void clicked_blueHouseTwo(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaPlava2, Polje31, move, "plaviPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaPlava2, Polje31, move, blueImage);
 
         }
 
         private void clicked_blueHouseThree(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaPlava3, Polje31, move, "plaviPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaPlava3, Polje31, move, blueImage);
 
         }
 
         private void clicked_blueHouseFour(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaPlava4, Polje31, move, "plaviPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaPlava4, Polje31, move, blueImage);
 
         }
 
         private void clicked_yellowHouseOne(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZuta1, Polje21, move, "zutiPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZuta1, Polje21, move, yellowImage);
 
         }
 
         private void clicked_yellowHouseTwo(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZuta2, Polje21, move, "zutiPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZuta2, Polje21, move, yellowImage);
 
         }
 
         private void clicked_yellowHouseThree(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZuta3, Polje21, move, "zutiPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZuta3, Polje21, move, yellowImage);
 
         }
 
         private void clicked_yellowHouseFour(object sender, RoutedEventArgs e)
         {
-            houseClicked(KucicaZuta4, Polje21, move, "zutiPijun.png");
+            if (checkMoveZero(move))
+                return;
+            houseClicked(KucicaZuta4, Polje21, move, yellowImage);
 
         }
         private void clicked_FieldOne(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
            bool flag=go(1, move, Polje1);
            finishMove(flag, move);
         }
 
         private void clicked_FieldTwo(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(2, move, Polje2);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThree(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(3, move, Polje3);
             finishMove(flag, move);
         }
 
         private void clicked_FieldFour(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(4, move, Polje4);
             finishMove(flag, move);
         }
 
         private void clicked_FieldFive(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(5, move, Polje5);
             finishMove(flag, move);
         }
 
         private void clicked_FieldSix(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(6, move, Polje6);
             finishMove(flag, move);
         }
 
         private void clicked_FieldSeven(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(7, move, Polje7);
             finishMove(flag, move);
         }
 
         private void clicked_FieldEight(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(8, move, Polje8);
             finishMove(flag, move);
         }
 
         private void clicked_FieldNine(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(9, move, Polje9);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(10, move, Polje10);
             finishMove(flag, move);
         }
 
         private void clicked_FieldEleven(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(11, move, Polje11);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwelve(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(12, move, Polje12);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirteen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(13, move, Polje13);
             finishMove(flag, move);
         }
 
         private void clicked_FieldFourteen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(14, move, Polje14);
             finishMove(flag, move);
         }
 
         private void clicked_FieldFifteen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(15, move, Polje15);
             finishMove(flag, move);
         }
 
         private void clicked_FieldSixteen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(16, move, Polje16);
             finishMove(flag, move);
         }
 
         private void clicked_FieldSeventeen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(17, move, Polje17);
             finishMove(flag, move);
         }
 
         private void clicked_FieldEighteen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(18, move, Polje18);
             finishMove(flag, move);
         }
 
         private void clicked_FieldNineteen(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(19, move, Polje19);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwenty(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(20, move, Polje20);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentyone(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(21, move, Polje21);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentytwo(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(22, move, Polje22);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentythree(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(23, move, Polje23);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentyfour(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(24, move, Polje24);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentyfive(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(25, move, Polje25);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentysix(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(26, move, Polje26);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentyseven(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(27, move, Polje27);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentyeight(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(28, move, Polje28);
             finishMove(flag, move);
         }
 
         private void clicked_FieldTwentynine(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(29, move, Polje29);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirty(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(30, move, Polje30);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThiryone(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(31, move, Polje31);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirtytwo(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(32, move, Polje32);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirtythree(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(33, move, Polje33);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirtyfour(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(34, move, Polje34);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirtyfive(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(35, move, Polje35);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThritysix(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(36, move, Polje36);
             finishMove(flag, move);
         }
 
         private void clicked_FIeldThirtyseven(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(37, move, Polje37);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirtyeight(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(38, move, Polje38);
             finishMove(flag, move);
         }
 
         private void clicked_FieldThirtynine(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(39, move, Polje39);
             finishMove(flag, move);
         }
 
         private void clicked_FieldFourty(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = go(40, move, Polje40);
             finishMove(flag, move);
         }
@@ -1128,72 +1303,96 @@ namespace Covjece_ne_ljuti_se
         
         private void clicked_redFisnishOne(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag=service.moveFinish(KrajCrveni1,move,finishRed);
             finishMove(flag, move);
         }
 
         private void clicked_redFinishTwo(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajCrveni2, move, finishRed);
             finishMove(flag, move);
         }
 
         private void clicked_redFinishThree(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajCrveni3, move, finishRed);
             finishMove(flag, move);
         }
 
         private void clicked_blueFinishOne(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajPlavi1, move, finishBlue);
             finishMove(flag, move);
         }
 
         private void clicked_blueFinishTwo(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajPlavi2, move, finishBlue);
             finishMove(flag, move);
         }
 
         private void clicked_blueFinishThree(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajPlavi3, move, finishBlue);
             finishMove (flag, move);
         }
 
         private void clicked_yellowFinishOne(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajZuti1, move, finishYellow);
             finishMove(flag, move);
         }
 
         private void clicked_yellowFinishTwo(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajZuti2, move, finishYellow);
             finishMove(flag, move);
         }
 
         private void clicked_yellowFinishThree(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajZuti3, move, finishYellow);
             finishMove(flag, move);
         }
 
         private void clicked_greenFinishOne(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajZeleni1, move, finishGreen);
             finishMove(flag, move);
         }
 
         private void clicked_greenFinishTwo(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajZeleni2, move, finishGreen);
             finishMove(flag, move);
         }
 
         private void clicked_greenFinishThree(object sender, RoutedEventArgs e)
         {
+            if (checkMoveZero(move))
+                return;
             bool flag = service.moveFinish(KrajZeleni3, move, finishGreen);
             finishMove(flag, move);
         }

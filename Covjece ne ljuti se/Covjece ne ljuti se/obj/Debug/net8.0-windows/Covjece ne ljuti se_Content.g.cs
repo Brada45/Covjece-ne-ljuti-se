@@ -17,6 +17,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/kocka_4.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/kocka_5.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/kocka_6.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/main_screen.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/plavipijun.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/zelenipijun.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/zutipijun.png")]
