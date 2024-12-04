@@ -121,3 +121,4 @@ C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\C
 C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\main_screen.jpg
 C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Welcome.g.cs
 C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\obj\Debug\net8.0-windows\Welcome.baml
+C:\Users\ksrdj.SRDJAN\OneDrive\Desktop\Covjece ne ljuti se\Covjece ne ljuti se\Covjece ne ljuti se\bin\Debug\net8.0-windows\Resources\main_screen_blur.jpg

@@ -64,47 +64,16 @@ namespace Covjece_ne_ljuti_se
 
             InitializeComponent();
 
-            fields.Add(Polje1); fields.Add(Polje2); fields.Add(Polje3); fields.Add(Polje4); fields.Add(Polje5); fields.Add(Polje6); fields.Add(Polje7); fields.Add(Polje8);
-            fields.Add(Polje9); fields.Add(Polje10); fields.Add(Polje11); fields.Add(Polje12); fields.Add(Polje12); fields.Add(Polje13); fields.Add(Polje14); fields.Add(Polje15);
-            fields.Add(Polje16); fields.Add(Polje17); fields.Add(Polje18); fields.Add(Polje19); fields.Add(Polje20); fields.Add(Polje21); fields.Add(Polje22); fields.Add(Polje23);
-            fields.Add(Polje24); fields.Add(Polje25); fields.Add(Polje26); fields.Add(Polje27); fields.Add(Polje28); fields.Add(Polje29); fields.Add(Polje30); fields.Add(Polje31);
-            fields.Add(Polje32); fields.Add(Polje33); fields.Add(Polje34); fields.Add(Polje35); fields.Add(Polje36); fields.Add(Polje37); fields.Add(Polje38); fields.Add(Polje39); fields.Add(Polje40);
+            SetFields();
+            SetFinishesFields("KrajCrveni",finishRed);
+            SetFinishesFields("KrajZeleni",finishGreen);
+            SetFinishesFields("KrajPlavi",finishBlue);
+            SetFinishesFields("KrajZuti",finishYellow);
 
-
-
-
-            
-
-            
-
-            buttonFields.Add(ButtonPolje1); buttonFields.Add(ButtonPolje2); buttonFields.Add(ButtonPolje3); buttonFields.Add(ButtonPolje4); buttonFields.Add(ButtonPolje5); buttonFields.Add(ButtonPolje6); buttonFields.Add(ButtonPolje7); buttonFields.Add(ButtonPolje8);
-            buttonFields.Add(ButtonPolje9); buttonFields.Add(ButtonPolje10); buttonFields.Add(ButtonPolje11); buttonFields.Add(ButtonPolje12); buttonFields.Add(ButtonPolje12); buttonFields.Add(ButtonPolje13); buttonFields.Add(ButtonPolje14); buttonFields.Add(ButtonPolje15);
-            buttonFields.Add(ButtonPolje16); buttonFields.Add(ButtonPolje17); buttonFields.Add(ButtonPolje18); buttonFields.Add(ButtonPolje19); buttonFields.Add(ButtonPolje20); buttonFields.Add(ButtonPolje21); buttonFields.Add(ButtonPolje22); buttonFields.Add(ButtonPolje23);
-            buttonFields.Add(ButtonPolje24); buttonFields.Add(ButtonPolje25); buttonFields.Add(ButtonPolje26); buttonFields.Add(ButtonPolje27); buttonFields.Add(ButtonPolje28); buttonFields.Add(ButtonPolje29); buttonFields.Add(ButtonPolje30); buttonFields.Add(ButtonPolje31);
-            buttonFields.Add(ButtonPolje32); buttonFields.Add(ButtonPolje33); buttonFields.Add(ButtonPolje34); buttonFields.Add(ButtonPolje35); buttonFields.Add(ButtonPolje36); buttonFields.Add(ButtonPolje37); buttonFields.Add(ButtonPolje38); buttonFields.Add(ButtonPolje39); buttonFields.Add(ButtonPolje40);
-
-            finishRed.Add(KrajCrveni1); finishRed.Add(KrajCrveni2); finishRed.Add(KrajCrveni3); finishRed.Add(KrajCrveni4);
-            finishes.Add(KrajCrveni1); finishes.Add(KrajCrveni2); finishes.Add(KrajCrveni3); finishes.Add(KrajCrveni4);
-            buttonHouses.Add(ButtonKucicaCrvena1); buttonHouses.Add(ButtonKucicaCrvena2); buttonHouses.Add(ButtonKucicaCrvena4); buttonHouses.Add(ButtonKucicaCrvena4);
-            houses.Add(KucicaCrvena1); houses.Add(KucicaCrvena2); houses.Add(KucicaCrvena3); houses.Add(KucicaCrvena4);
-
-
-            finishGreen.Add(KrajZeleni1); finishGreen.Add(KrajZeleni2); finishGreen.Add(KrajZeleni3); finishGreen.Add(KrajZeleni4);
-            finishes.Add(KrajZeleni1); finishes.Add(KrajZeleni2); finishes.Add(KrajZeleni3); finishes.Add(KrajZeleni4);
-            buttonHouses.Add(ButtonKucicaZelena1); buttonHouses.Add(ButtonKucicaZelena2); buttonHouses.Add(ButtonKucicaZelena4); buttonHouses.Add(ButtonKucicaZelena4);
-            houses.Add(KucicaZelena1); houses.Add(KucicaZelena2); houses.Add(KucicaZelena3); houses.Add(KucicaZelena4);
-
-
-            finishYellow.Add(KrajZuti1); finishYellow.Add(KrajZuti2); finishYellow.Add(KrajZuti3); finishYellow.Add(KrajZuti4);
-            finishes.Add(KrajZuti1); finishes.Add(KrajZuti2); finishes.Add(KrajZuti3); finishes.Add(KrajZuti4);
-            buttonHouses.Add(ButtonKucicaZuta1); buttonHouses.Add(ButtonKucicaZuta2); buttonHouses.Add(ButtonKucicaZuta4); buttonHouses.Add(ButtonKucicaZuta4);
-            houses.Add(KucicaZuta1); houses.Add(KucicaZuta2); houses.Add(KucicaZuta3); houses.Add(KucicaZuta4);
-
-            finishBlue.Add(KrajPlavi1); finishBlue.Add(KrajPlavi2); finishBlue.Add(KrajPlavi3); finishBlue.Add(KrajPlavi4);
-            finishes.Add(KrajPlavi1); finishes.Add(KrajPlavi2); finishes.Add(KrajPlavi3); finishes.Add(KrajPlavi4);
-            buttonHouses.Add(ButtonKucicaPlava1); buttonHouses.Add(ButtonKucicaPlava2); buttonHouses.Add(ButtonKucicaPlava4); buttonHouses.Add(ButtonKucicaPlava4);
-            houses.Add(KucicaPlava1); houses.Add(KucicaPlava2); houses.Add(KucicaPlava3); houses.Add(KucicaPlava4);
-
+            SetHouses("Crvena");
+            SetHouses("Zelena");
+            SetHouses("Plava");
+            SetHouses("Zuta");
 
             string filePath = "Resources/config.properties";
             properties= LoadProperties(filePath);
@@ -112,6 +81,61 @@ namespace Covjece_ne_ljuti_se
             sound = properties["dice_throw"];
         }
 
+       
+        private void SetFields()
+        {
+            for (int i = 1; i <= 40; i++)
+            {
+                string fieldName = $"Polje{i}";
+                Image img = (Image)this.FindName(fieldName);
+                if (img != null)
+                {
+                    fields.Add(img);
+                }
+                fieldName = $"buttonFields{i}";
+                Button button = (Button)this.FindName(fieldName);
+                if (button != null)
+                {
+                    buttonFields.Add(button);
+                }
+            }
+        }
+
+        private void SetFinishesFields(String color,List<Image> finish)
+        {
+
+            for (int i = 1; i <= 4; i++)
+            {
+                string fieldName =color+$"{i}";
+                Image img = (Image)this.FindName(fieldName);
+                if (img != null)
+                {
+                    finishes.Add(img);
+                    finish.Add(img);
+                }
+            }
+        }
+
+        private void SetHouses(String color)
+        {
+
+            for (int i = 1; i <= 4; i++)
+            {
+                string houseName ="Kucica"+color+$"{i}";
+                string buttonHouse = "ButtonKucica"+color+$"{i}";
+                Image houseImg = (Image)this.FindName(houseName);
+                Button button = (Button)this.FindName(buttonHouse);
+                if (houseImg != null)
+                {
+                    houses.Add(houseImg);
+                }
+                if (button != null)
+                {
+
+                    buttonHouses.Add(button);
+                }
+            }
+        }
         static Dictionary<string, string> LoadProperties(string filePath)
         {
             var properties = new Dictionary<string, string>();
@@ -143,7 +167,8 @@ namespace Covjece_ne_ljuti_se
             initializePlayerTurn();
             seconds = 0;
             timer = new Timer(OnTimedEvent, null, 0, 1000);
-            if(code==1 && numOfPlayers == 2)
+            SetImages();
+            if (code==1 && numOfPlayers == 2)
             {
                 initializeRedPlayer();
                 initializeYellowPlayer();
@@ -168,9 +193,17 @@ namespace Covjece_ne_ljuti_se
             lockField(code);
         }
 
-        public void initializeRedPlayer()
+        public void SetImages()
         {
             redImage = properties["redPawn"];
+            greenImage = properties["greenPawn"];
+            blueImage = properties["bluePawn"];
+            yellowImage = properties["yellowPawn"];
+
+        }
+
+        public void initializeRedPlayer()
+        {
             service.setImage(KucicaCrvena1, redImage);
             service.setImage(KucicaCrvena2, redImage);
             service.setImage(KucicaCrvena3, redImage);
@@ -180,7 +213,6 @@ namespace Covjece_ne_ljuti_se
 
         public void initializeGreenPlayer()
         {
-            greenImage = properties["greenPawn"];
             
             service.setImage(KucicaZelena1, greenImage);
             service.setImage(KucicaZelena2, greenImage);
@@ -191,7 +223,6 @@ namespace Covjece_ne_ljuti_se
 
         public void initializeBluePlayer()
         {
-            blueImage = properties["bluePawn"];
             service.setImage(KucicaPlava1, blueImage);
             service.setImage(KucicaPlava2, blueImage);
             service.setImage(KucicaPlava3, blueImage);
@@ -200,7 +231,6 @@ namespace Covjece_ne_ljuti_se
 
         public void initializeYellowPlayer()
         {
-            yellowImage = properties["yellowPawn"];
             service.setImage(KucicaZuta1, yellowImage);
             service.setImage(KucicaZuta2, yellowImage);
             service.setImage(KucicaZuta3, yellowImage);

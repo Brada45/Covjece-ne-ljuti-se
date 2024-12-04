@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="ChoosePlayers" Height="420" Width="300">
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Image Source="Resources/main_screen.jpg"/>
+        <Image Source="Resources/main_screen_blur.jpg"/>
         <Label Content="2 Player" FontSize="20" HorizontalAlignment="Left" Margin="0,67,0,3" />
-        <Button Height="40" Width="86" HorizontalAlignment="Left" Margin="189,94,0,0" BorderBrush="LightBlue" BorderThickness="3"  VerticalAlignment="Top" Click="clicked_TwoRedYellow">
+        <Button Height="40" Width="86" HorizontalAlignment="Right" Margin="0,94,13,0" BorderBrush="LightBlue" BorderThickness="3"  VerticalAlignment="Top" Click="clicked_TwoRedYellow">
             <Grid>
                 <Grid Width="40" Height="34" Margin="0,0,40,0"  Background="Red"/>
                 <Grid Width="40" Height="34" Margin="36,0,0,0"  Background="Yellow"/>

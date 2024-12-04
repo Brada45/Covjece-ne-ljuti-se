@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\chooseplayers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\chooseplayers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\winner.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\winner.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\winner.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\winner.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\winner.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\winner.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|solutionrelative:covjece ne ljuti se\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{647167C8-950F-4281-9720-6117C848B073}|Covjece ne ljuti se\\Covjece ne ljuti se.csproj|c:\\users\\ksrdj.srdjan\\onedrive\\desktop\\covjece ne ljuti se\\covjece ne ljuti se\\covjece ne ljuti se\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,94 +54,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Winner.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Winner.xaml.cs",
-              "RelativeDocumentMoniker": "Covjece ne ljuti se\\Winner.xaml.cs",
-              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Winner.xaml.cs",
-              "RelativeToolTip": "Covjece ne ljuti se\\Winner.xaml.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAIwCwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T14:20:47.574Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Covjece ne ljuti se\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Covjece ne ljuti se\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAcwIkAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T20:48:09.077Z",
+              "Title": "ChoosePlayers.xaml",
+              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\ChoosePlayers.xaml",
+              "RelativeDocumentMoniker": "Covjece ne ljuti se\\ChoosePlayers.xaml",
+              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\ChoosePlayers.xaml",
+              "RelativeToolTip": "Covjece ne ljuti se\\ChoosePlayers.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-04T17:40:03.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChoosePlayers.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
-              "RelativeDocumentMoniker": "Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
-              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
-              "RelativeToolTip": "Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwB8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T00:31:32.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Winner.xaml",
               "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Winner.xaml",
               "RelativeDocumentMoniker": "Covjece ne ljuti se\\Winner.xaml",
               "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Winner.xaml",
               "RelativeToolTip": "Covjece ne ljuti se\\Winner.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T14:21:23.392Z"
+              "WhenOpened": "2024-11-27T14:21:23.392Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Service.cs",
-              "RelativeDocumentMoniker": "Covjece ne ljuti se\\Service.cs",
-              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Service.cs",
-              "RelativeToolTip": "Covjece ne ljuti se\\Service.cs",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T17:40:00.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Welcome.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Welcome.xaml.cs",
-              "RelativeDocumentMoniker": "Covjece ne ljuti se\\Welcome.xaml.cs",
-              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Welcome.xaml.cs",
-              "RelativeToolTip": "Covjece ne ljuti se\\Welcome.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwB4AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T15:56:06.225Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\App.xaml",
               "RelativeDocumentMoniker": "Covjece ne ljuti se\\App.xaml",
               "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\App.xaml",
               "RelativeToolTip": "Covjece ne ljuti se\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-21T00:07:53.259Z"
+              "WhenOpened": "2024-11-21T00:07:53.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Covjece ne ljuti se\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\MainWindow.xaml",
+              "RelativeToolTip": "Covjece ne ljuti se\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-04T11:02:35.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Covjece ne ljuti se\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Covjece ne ljuti se\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswEsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T20:48:09.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Winner.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Winner.xaml.cs",
+              "RelativeDocumentMoniker": "Covjece ne ljuti se\\Winner.xaml.cs",
+              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Winner.xaml.cs",
+              "RelativeToolTip": "Covjece ne ljuti se\\Winner.xaml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAywCwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:20:47.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Service.cs",
+              "RelativeDocumentMoniker": "Covjece ne ljuti se\\Service.cs",
+              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Service.cs",
+              "RelativeToolTip": "Covjece ne ljuti se\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T17:40:00.248Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Welcome.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Welcome.xaml.cs",
+              "RelativeDocumentMoniker": "Covjece ne ljuti se\\Welcome.xaml.cs",
+              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Welcome.xaml.cs",
+              "RelativeToolTip": "Covjece ne ljuti se\\Welcome.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:56:06.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChoosePlayers.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
+              "RelativeDocumentMoniker": "Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
+              "ToolTip": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
+              "RelativeToolTip": "Covjece ne ljuti se\\ChoosePlayers.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T00:31:32.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Welcome.xaml",
               "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Welcome.xaml",
               "RelativeDocumentMoniker": "Covjece ne ljuti se\\Welcome.xaml",
@@ -144,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Dice.cs",
               "DocumentMoniker": "C:\\Users\\ksrdj.SRDJAN\\OneDrive\\Desktop\\Covjece ne ljuti se\\Covjece ne ljuti se\\Covjece ne ljuti se\\Dice.cs",
               "RelativeDocumentMoniker": "Covjece ne ljuti se\\Dice.cs",
